@@ -1,0 +1,1 @@
+A small machine learning exercise I did years ago. It uses sklearn and quandl to compare several high-level machine learning approaches/algorithms.
