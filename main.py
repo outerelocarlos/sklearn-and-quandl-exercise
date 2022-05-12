@@ -194,22 +194,22 @@ def main():
             if file_title[i] == '/': file_title[i] = '_'
         file_title = "".join(file_title) #http://effbot.org/pyfaq/why-are-python-strings-immutable.htm
         
-        stock.to_csv("%s.csv" % file_title, sep = '\t', 
+        stock.to_csv("./csv/%s.csv" % file_title, sep = '\t', 
                 encoding = 'utf-8', index = True)
         
 
         # The Excel file is created if k == 0
         if k == 0:
             if clf_choice == 0:
-                filepath = "LinearRegression.xlsx"
+                filepath = "./xlsx/LinearRegression.xlsx"
             elif clf_choice == 1:
-                filepath = "KNeighborsRegressor.xlsx"
+                filepath = "./xlsx/KNeighborsRegressor.xlsx"
             elif clf_choice == 2:
-                filepath = "DecisionTreeRegressor.xlsx"
+                filepath = "./xlsx/DecisionTreeRegressor.xlsx"
             elif clf_choice == 3:
-                filepath = "AdaBoostRegressor.xlsx"
+                filepath = "./xlsx/AdaBoostRegressor.xlsx"
             elif clf_choice == 4:
-                filepath = "SVR.xlsx"
+                filepath = "./xlsx/SVR.xlsx"
             openpyxl.Workbook().save(filepath)
 
         # The data is written to a dedicated sheet in the Excel file
